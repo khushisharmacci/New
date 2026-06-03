@@ -290,7 +290,7 @@ export function Industries() {
               className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-sage hover:shadow-lg"
             >
               <div className="inline-flex size-10 items-center justify-center rounded-lg bg-sage/30 text-ocean transition-colors group-hover:bg-teal group-hover:text-teal-foreground">
-                <Icon className="size-4.5" />
+                <Icon className="size-[18px]" />
               </div>
               <h3 className="mt-4 font-display text-base font-semibold text-foreground">{title}</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{desc}</p>
@@ -332,7 +332,7 @@ export function WhyUs() {
               className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm transition-all hover:-translate-y-1 hover:bg-white/10"
             >
               <div className="inline-flex size-10 items-center justify-center rounded-lg bg-sage/25 text-sage">
-                <Icon className="size-4.5" />
+                <Icon className="size-[18px]" />
               </div>
               <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ocean-foreground/75">{desc}</p>
