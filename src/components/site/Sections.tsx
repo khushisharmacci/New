@@ -32,6 +32,18 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import heroImg from "@/assets/hero-collab.jpg";
+import img1 from "@/assets/carousel/team-meeting.jpg.asset.json";
+import img2 from "@/assets/carousel/leader.jpg.asset.json";
+import img3 from "@/assets/carousel/right-person.jpg.asset.json";
+import img4 from "@/assets/carousel/handshake.webp.asset.json";
+
+const carouselImages = [
+  { src: img1.url, alt: "Team strategy meeting" },
+  { src: img2.url, alt: "Leader presenting to team" },
+  { src: img3.url, alt: "Right person for the right job" },
+  { src: img4.url, alt: "Recruitment handshake" },
+  { src: heroImg, alt: "Recruiters collaborating" },
+];
 
 /* ───────── HERO ───────── */
 
@@ -76,19 +88,19 @@ function Stat({ value, suffix, label }: { value: number; suffix: string; label: 
 export function Hero() {
   return (
     <section id="home" className="gradient-hero relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[1.05fr_1fr] lg:px-8">
-        <div className="animate-fade-in">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="animate-fade-in text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-xs font-medium text-teal">
-            <Sparkles className="size-3.5" /> Where Talent Meets Opportunity
+            <Sparkles className="size-3.5" /> Career Connect India
           </span>
           <h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Connecting <span className="text-gradient">Exceptional Talent</span> with Ambitious Organizations
+            Where Talent Meets <span className="text-gradient">Opportunity</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             We help businesses build high-performing teams by identifying, assessing, and connecting them with
             professionals who drive long-term growth and success.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-ocean px-6 py-3.5 text-sm font-semibold text-ocean-foreground shadow-lg shadow-ocean/20 transition-all hover:-translate-y-0.5 hover:shadow-xl"
@@ -103,37 +115,31 @@ export function Hero() {
               Explore Services
             </a>
           </div>
+        </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            <Stat value={15} suffix="+" label="Years Experience" />
-            <Stat value={1000} suffix="+" label="Placements" />
-            <Stat value={250} suffix="+" label="Corporate Clients" />
-            <Stat value={20} suffix="+" label="Specializations" />
+        <div className="relative mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+          <div className="flex w-max gap-6 animate-marquee">
+            {[...carouselImages, ...carouselImages].map((img, i) => (
+              <div
+                key={i}
+                className="relative h-64 w-[420px] shrink-0 overflow-hidden rounded-2xl border border-foreground/10 shadow-lg shadow-ocean/10 sm:h-72 sm:w-[520px]"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-teal/30 via-sage/20 to-beige/30 blur-2xl" />
-          <div className="overflow-hidden rounded-3xl border border-foreground/10 shadow-2xl shadow-ocean/10">
-            <img
-              src={heroImg}
-              alt="Recruiters and business leaders collaborating"
-              width={1600}
-              height={1100}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="glass absolute -bottom-6 -left-4 hidden rounded-2xl p-4 shadow-xl sm:block">
-            <div className="flex items-center gap-3">
-              <div className="rounded-xl bg-sage/30 p-2.5 text-ocean">
-                <Network className="size-5" />
-              </div>
-              <div>
-                <div className="text-sm font-semibold text-foreground">Trusted talent network</div>
-                <div className="text-xs text-muted-foreground">Across 20+ industries in India</div>
-              </div>
-            </div>
-          </div>
+        <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
+          <Stat value={15} suffix="+" label="Years Experience" />
+          <Stat value={1000} suffix="+" label="Placements" />
+          <Stat value={250} suffix="+" label="Corporate Clients" />
+          <Stat value={20} suffix="+" label="Specializations" />
         </div>
       </div>
     </section>
