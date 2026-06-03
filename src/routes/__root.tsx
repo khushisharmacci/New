@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Career Connect India" },
+      { name: "description", content: "A modern, responsive corporate website for Career Connect India, a recruitment and executive search firm." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Career Connect India" },
+      { property: "og:description", content: "A modern, responsive corporate website for Career Connect India, a recruitment and executive search firm." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Career Connect India" },
+      { name: "twitter:description", content: "A modern, responsive corporate website for Career Connect India, a recruitment and executive search firm." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ce8f8174-a5d1-4576-90c2-eb2c94ba20b8/id-preview-4cf45538--71824e1e-2921-483b-b051-a6e26ef49fa4.lovable.app-1780481591619.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ce8f8174-a5d1-4576-90c2-eb2c94ba20b8/id-preview-4cf45538--71824e1e-2921-483b-b051-a6e26ef49fa4.lovable.app-1780481591619.png" },
     ],
     links: [
       {
