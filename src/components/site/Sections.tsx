@@ -244,7 +244,7 @@ export function Services() {
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
+          {services.map(({ icon: Icon, title }) => (
             <div
               key={title}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-xl"
@@ -253,11 +253,7 @@ export function Services() {
               <div className="relative flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
                 <Icon className="size-5" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold text-foreground">{title}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-teal opacity-0 transition-opacity group-hover:opacity-100">
-                Learn more <ArrowRight className="size-3.5" />
-              </div>
+              <h3 className="relative mt-5 font-display text-xl font-semibold text-foreground">{title}</h3>
             </div>
           ))}
         </div>
@@ -290,7 +286,7 @@ export function Industries() {
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {industries.map(({ icon: Icon, title, desc }) => (
+          {industries.map(({ icon: Icon, title }) => (
             <div
               key={title}
               className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-sage hover:shadow-lg"
@@ -299,7 +295,6 @@ export function Industries() {
                 <Icon className="size-[18px]" />
               </div>
               <h3 className="mt-4 font-display text-base font-semibold text-foreground">{title}</h3>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{desc}</p>
             </div>
           ))}
         </div>
