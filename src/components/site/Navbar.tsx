@@ -49,7 +49,7 @@ export function Navbar() {
           <img
             src={logo.url}
             alt="Career Connect India"
-            className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen dark:[filter:brightness(0)_invert(1)]"
+            className="h-12 w-auto object-contain"
           />
         </a>
 
