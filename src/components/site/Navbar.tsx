@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
-import logo from "@/assets/cci-logo.asset.json";
+import logo from "@/assets/cci-logo-new.png.asset.json";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -46,10 +46,11 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
         <a href="#home" className="flex items-center gap-2.5">
-          <img src={logo.url} alt="Career Connect India" className="h-10 w-auto" />
-          <span className="hidden font-display text-base font-semibold tracking-tight text-foreground sm:block">
-            Career Connect <span className="text-teal">India</span>
-          </span>
+          <img
+            src={logo.url}
+            alt="Career Connect India"
+            className="h-12 w-auto object-contain mix-blend-multiply dark:mix-blend-screen dark:[filter:brightness(0)_invert(1)]"
+          />
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex">
