@@ -91,11 +91,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ce8f8174-a5d1-4576-90c2-eb2c94ba20b8/id-preview-4cf45538--71824e1e-2921-483b-b051-a6e26ef49fa4.lovable.app-1780481591619.png" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
+  {
+    rel: "stylesheet",
+    href: appCss,
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    href: "/ccilogo.png",
+  },
+],
   }),
   shellComponent: RootShell,
   component: RootComponent,
