@@ -779,8 +779,8 @@ export function Footer() {
               ["Executive Search", "#services"],
               ["Leadership Hiring", "#services"],
               ["Permanent Recruitment", "#services"],
-              ["Talent Mapping", "#services"],
-              ["Workforce Advisory", "#services"],
+            ["Talent Mapping", "#services"],
+            ["Career Advisory", "#services"],
             ]}
           />
           <FooterCol
