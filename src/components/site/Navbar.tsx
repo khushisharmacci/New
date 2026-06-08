@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
-import logo from "@/assets/cci-logo-new.png.asset.json";
+import logo from "@/assets/ccilogo.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -47,7 +47,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
         <a href="#home" className="flex items-center gap-2.5">
           <img
-            src={logo.url}
+            src={logo}
             alt="Career Connect India"
             className="h-12 w-auto object-contain"
           />

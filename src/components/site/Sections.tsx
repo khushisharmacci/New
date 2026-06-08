@@ -1,3 +1,4 @@
+import mukeshPhoto from "@/assets/MB.png";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -30,21 +31,21 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
+  PhoneOutgoingIcon,
 } from "lucide-react";
 import heroImg from "@/assets/hero-collab.jpg";
-import img1 from "@/assets/carousel/team-meeting.jpg.asset.json";
-import img2 from "@/assets/carousel/leader.jpg.asset.json";
-import img3 from "@/assets/carousel/right-person.jpg.asset.json";
-import img4 from "@/assets/carousel/handshake.webp.asset.json";
+import img1 from "@/assets/carousel/team-meeting.jpg";
+import img2 from "@/assets/carousel/leader.jpg";
+import img3 from "@/assets/carousel/right-person.jpg";
+import img4 from "@/assets/carousel/handshake.jpg";
 
 const carouselImages = [
-  { src: img1.url, alt: "Team strategy meeting" },
-  { src: img2.url, alt: "Leader presenting to team" },
-  { src: img3.url, alt: "Right person for the right job" },
-  { src: img4.url, alt: "Recruitment handshake" },
+  { src: img1, alt: "Team strategy meeting" },
+  { src: img2, alt: "Leader presenting to team" },
+  { src: img3, alt: "Right person for the right job" },
+  { src: img4, alt: "Recruitment handshake" },
   { src: heroImg, alt: "Recruiters collaborating" },
 ];
-
 /* ───────── HERO ───────── */
 
 function useCountUp(target: number, duration = 1600) {
@@ -582,9 +583,11 @@ export function Contact() {
         <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ocean/8 via-card to-teal/5 p-8 shadow-xl sm:p-12">
           <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
             <div className="flex flex-col items-center gap-4 lg:items-start">
-              <div className="flex size-28 items-center justify-center rounded-full bg-ocean text-3xl font-bold text-ocean-foreground shadow-lg sm:size-32 sm:text-4xl">
-                MB
-              </div>
+              <img
+  src={mukeshPhoto}
+  alt="Mukesh Bhasin"
+  className="size-32 rounded-full object-cover border-4 border-ocean shadow-2xl ring-4 ring-ocean/20"
+/>
               <a
                 href="https://www.linkedin.com/in/mukeshbhasin?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
