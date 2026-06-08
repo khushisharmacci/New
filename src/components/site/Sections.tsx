@@ -230,7 +230,7 @@ const services = [
   { icon: Users, title: "Permanent Recruitment", desc: "End-to-end hiring solutions for critical business functions." },
   { icon: Compass, title: "Talent Mapping", desc: "Comprehensive market research and talent intelligence to support future workforce planning." },
   { icon: Wrench, title: "Recruitment Process Consulting", desc: "Optimize hiring workflows, candidate experiences, and recruitment efficiency." },
-  { icon: LineChart, title: "Workforce Advisory", desc: "Strategic guidance on talent acquisition, retention, and organizational growth." },
+  { icon: LineChart, title: "Career Advisory", desc: "Personalized career guidance, leadership coaching, career transition support, executive mentoring, and strategic professional development advisory for professionals across all career stages." },
 ];
 
 export function Services() {
@@ -565,47 +565,6 @@ export function Testimonials() {
 /* ───────── CONTACT ───────── */
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    requirement: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const validate = () => {
-    const e: Record<string, string> = {};
-    if (!form.name.trim()) e.name = "Required";
-    if (!form.email.trim()) e.email = "Required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
-    if (!form.message.trim()) e.message = "Required";
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validate()) return;
-    const subject = encodeURIComponent(`New enquiry from ${form.name}${form.company ? " — " + form.company : ""}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nPhone: ${form.phone}\nRequirement: ${form.requirement}\n\n${form.message}`
-    );
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=mukesh@careerconnectindia.com&su=${subject}&body=${body}`,
-      "_blank"
-    );
-    setSent(true);
-  };
-
-  const field = (k: keyof typeof form) => ({
-    value: form[k],
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-      setForm((f) => ({ ...f, [k]: e.target.value.slice(0, 1000) })),
-  });
-
   return (
     <section id="contact" className="bg-gradient-to-b from-beige/30 to-background py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -613,119 +572,144 @@ export function Contact() {
           eyebrow="Contact"
           title={
             <>
-              Let's Build Your <span className="text-gradient">Team Together</span>
+              Book a One-on-One <span className="text-gradient">Consultation</span>
             </>
           }
-          subtitle="Tell us about your hiring needs — we'll get back within one business day."
+          subtitle="Executive search, leadership hiring, career advisory and professional development — guided personally by Mukesh Bhasin."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr_1fr]">
-          <form
-            onSubmit={onSubmit}
-            className="rounded-3xl border border-border bg-card p-7 shadow-lg sm:p-9"
-            noValidate
-          >
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Input label="Name" required error={errors.name} {...field("name")} />
-              <Input label="Company" {...field("company")} />
-              <Input label="Email" type="email" required error={errors.email} {...field("email")} />
-              <Input label="Phone" type="tel" {...field("phone")} />
-              <Input label="Requirement" placeholder="e.g. Head of Risk" className="sm:col-span-2" {...field("requirement")} />
-              <TextArea label="Message" required error={errors.message} {...field("message")} />
+        {/* Profile Card */}
+        <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ocean/8 via-card to-teal/5 p-8 shadow-xl sm:p-12">
+          <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
+            <div className="flex flex-col items-center gap-4 lg:items-start">
+              <div className="flex size-28 items-center justify-center rounded-full bg-ocean text-3xl font-bold text-ocean-foreground shadow-lg sm:size-32 sm:text-4xl">
+                MB
+              </div>
+              <a
+                href="https://www.linkedin.com/in/mukeshbhasin?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:border-teal hover:text-teal"
+              >
+                <Linkedin className="size-3.5" /> LinkedIn Profile
+              </a>
             </div>
-            <button
-              type="submit"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ocean px-6 py-3.5 text-sm font-semibold text-ocean-foreground shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg sm:w-auto"
-            >
-              {sent ? "Message Sent — opening Gmail" : "Send Message"} <ArrowRight className="size-4" />
-            </button>
-          </form>
 
-          <div className="space-y-4">
-            <div className="rounded-3xl border border-border bg-card p-7 shadow-sm">
-              <h3 className="font-display text-lg font-semibold text-foreground">Mumbai Office</h3>
-              <div className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <div className="flex gap-3">
-                  <MapPin className="size-4 shrink-0 text-teal" />
-                  <p>
-                    Alloy Workspaces, 4th Floor, Safal Pride, Punjabwadi 397/A, Safal Pride Tower, opp. Saras Baug
-                    Road, Deonar, Chembur, Mumbai, 400088
-                  </p>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Founder & Principal Consultant</div>
+              <h3 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Mukesh Bhasin
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Civil Engineer (VJTI) and MMS Finance (JBIMS) with 25+ years across Corporate Banking, Investment Banking,
+                Structured Finance, Infrastructure Finance and Equipment Finance — at Citibank, ABN AMRO, SBI Capital Markets,
+                GE Commercial Finance, IL&FS and Aditya Birla Finance (last role: Head — Syndication & DCM).
+              </p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {[
+                  { v: "25+", l: "Years Experience" },
+                  { v: "400+", l: "Search Mandates" },
+                  { v: "BFSI", l: "Corporate & Investment Banking Expert" },
+                ].map((s) => (
+                  <div key={s.l} className="rounded-2xl border border-border bg-card/70 p-4 text-center">
+                    <div className="font-display text-2xl font-bold text-ocean">{s.v}</div>
+                    <div className="mt-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                      {s.l}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Entrepreneurial & Executive Search</div>
+                  <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> Launched and managed multiple businesses</li>
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> 400+ executive search mandates delivered</li>
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> Deep professional & industry networks</li>
+                  </ul>
                 </div>
-                <a
-                  href="mailto:mukesh@careerconnectindia.com"
-                  className="flex items-center gap-3 text-foreground transition-colors hover:text-teal"
-                >
-                  <Mail className="size-4 shrink-0 text-teal" />
-                  mukesh@careerconnectindia.com
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mukeshbhasin?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-foreground transition-colors hover:text-teal"
-                >
-                  <Linkedin className="size-4 shrink-0 text-teal" />
-                  Connect on LinkedIn
-                </a>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Education</div>
+                  <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> Bachelor of Civil Engineering — VJTI, Mumbai (1995)</li>
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> MBA — JBIMS, Mumbai (1999)</li>
+                  </ul>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div className="overflow-hidden rounded-3xl border border-border shadow-sm">
-              <iframe
-                title="Career Connect India — Mumbai Office Location"
-                src="https://www.google.com/maps?q=Safal+Pride+Tower,+Deonar,+Chembur,+Mumbai+400088&output=embed"
-                className="h-64 w-full"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+        {/* Consultation CTA */}
+        <div className="mt-8 rounded-3xl border border-border bg-card p-8 text-center shadow-lg sm:p-12">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Looking for career guidance, leadership mentoring, executive search support, or hiring advisory? Schedule a
+            one-on-one consultation with Mukesh Bhasin.
+          </p>
+          <a
+            href="https://topmate.io/mukeshbhasin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-ocean px-7 py-4 text-sm font-semibold text-ocean-foreground shadow-lg shadow-ocean/20 transition-all hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-xl sm:text-base"
+          >
+            Book a Consultation with Mukesh Bhasin
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+          </a>
+        </div>
+
+        {/* Contact Info Cards */}
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
+            <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
+              <MapPin className="size-5" />
             </div>
+            <h4 className="mt-4 font-display text-base font-semibold text-foreground">Office Address</h4>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              T2 4001, Crescent Bay<br />
+              Jerbai Wadia Road, Parel<br />
+              Mumbai, Maharashtra 400012<br />
+              India
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Crescent+Bay+Parel+Mumbai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-teal transition-colors hover:text-ocean"
+            >
+              View on Maps <ArrowRight className="size-3.5" />
+            </a>
+          </div>
+
+          <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
+            <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
+              <Phone className="size-5" />
+            </div>
+            <h4 className="mt-4 font-display text-base font-semibold text-foreground">Mobile</h4>
+            <a
+              href="tel:+919819855065"
+              className="mt-2 block text-sm text-muted-foreground transition-colors hover:text-teal"
+            >
+              +91 98198 55065
+            </a>
+          </div>
+
+          <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
+            <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
+              <Mail className="size-5" />
+            </div>
+            <h4 className="mt-4 font-display text-base font-semibold text-foreground">Email</h4>
+            <a
+              href="mailto:mukesh@careerconnectindia.com"
+              className="mt-2 block break-all text-sm text-muted-foreground transition-colors hover:text-teal"
+            >
+              mukesh@careerconnectindia.com
+            </a>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Input({
-  label,
-  required,
-  error,
-  className = "",
-  ...rest
-}: React.InputHTMLAttributes<HTMLInputElement> & { label: string; error?: string }) {
-  return (
-    <label className={`block ${className}`}>
-      <span className="mb-1.5 block text-xs font-semibold text-foreground">
-        {label} {required && <span className="text-teal">*</span>}
-      </span>
-      <input
-        {...rest}
-        className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
-      />
-      {error && <span className="mt-1 block text-xs text-destructive">{error}</span>}
-    </label>
-  );
-}
-
-function TextArea({
-  label,
-  required,
-  error,
-  ...rest
-}: React.TextareaHTMLAttributes<HTMLTextAreaElement> & { label: string; error?: string }) {
-  return (
-    <label className="block sm:col-span-2">
-      <span className="mb-1.5 block text-xs font-semibold text-foreground">
-        {label} {required && <span className="text-teal">*</span>}
-      </span>
-      <textarea
-        rows={4}
-        {...rest}
-        className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
-      />
-      {error && <span className="mt-1 block text-xs text-destructive">{error}</span>}
-    </label>
   );
 }
 
@@ -779,8 +763,8 @@ export function Footer() {
               ["Executive Search", "#services"],
               ["Leadership Hiring", "#services"],
               ["Permanent Recruitment", "#services"],
-              ["Talent Mapping", "#services"],
-              ["Workforce Advisory", "#services"],
+            ["Talent Mapping", "#services"],
+            ["Career Advisory", "#services"],
             ]}
           />
           <FooterCol

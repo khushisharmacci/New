@@ -16,17 +16,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Career Connect India — Where Talent Meets Opportunity" },
+      { title: "Career Connect India — Executive Search, Leadership Hiring & Career Advisory" },
       {
         name: "description",
         content:
-          "Career Connect India is a talent advisory and executive search firm helping organizations hire exceptional leadership and specialist talent across industries.",
+          "Executive search, leadership hiring, talent acquisition, recruitment consulting and career advisory by Mukesh Bhasin. Book a 1:1 consultation for executive mentoring, career coaching and professional development.",
       },
-      { property: "og:title", content: "Career Connect India — Executive Search & Talent Advisory" },
+      { property: "og:title", content: "Career Connect India — Executive Search & Career Advisory" },
       {
         property: "og:description",
         content:
-          "Leadership hiring, executive search, talent mapping, and workforce advisory across Banking, FinTech, Technology, Healthcare and more.",
+          "Leadership hiring, executive search, talent acquisition, recruitment consulting, career advisory and executive mentoring across Banking, FinTech, Technology and more.",
       },
       { property: "og:type", content: "website" },
     ],
