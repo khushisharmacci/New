@@ -230,7 +230,7 @@ const services = [
   { icon: Users, title: "Permanent Recruitment", desc: "End-to-end hiring solutions for critical business functions." },
   { icon: Compass, title: "Talent Mapping", desc: "Comprehensive market research and talent intelligence to support future workforce planning." },
   { icon: Wrench, title: "Recruitment Process Consulting", desc: "Optimize hiring workflows, candidate experiences, and recruitment efficiency." },
-  { icon: LineChart, title: "Workforce Advisory", desc: "Strategic guidance on talent acquisition, retention, and organizational growth." },
+  { icon: LineChart, title: "Career Advisory", desc: "Personalized career guidance, leadership coaching, career transition support, executive mentoring, and strategic professional development advisory for professionals across all career stages." },
 ];
 
 export function Services() {
