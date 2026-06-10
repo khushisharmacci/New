@@ -6,7 +6,6 @@ import {
   Services,
   Industries,
   WhyUs,
-  Process,
   EmployersCandidates,
   Testimonials,
   Contact,
@@ -45,7 +44,6 @@ function Index() {
         <Services />
         <Industries />
         <WhyUs />
-        <Process />
         <EmployersCandidates />
         <Testimonials />
         <Contact />

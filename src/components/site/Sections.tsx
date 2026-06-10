@@ -20,7 +20,7 @@ import {
   Stethoscope,
   Target,
   Users,
-  Wrench,
+  SearchCheck,
   Cpu,
   CreditCard,
   Award,
@@ -138,11 +138,11 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3">
           <Stat value={15} suffix="+" label="Years Experience" />
           <Stat value={1000} suffix="+" label="Placements" />
-          <Stat value={250} suffix="+" label="Corporate Clients" />
-          <Stat value={20} suffix="+" label="Specializations" />
+          <Stat value={50} suffix="+" label="Clients Serviced" />
+         
         </div>
       </div>
     </section>
@@ -197,10 +197,10 @@ export function About() {
           subtitle="Career Connect India is a talent advisory and executive search firm dedicated to helping organizations identify exceptional professionals across diverse industries."
         />
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-          Our approach combines industry expertise, market intelligence, extensive professional networks, and a deep
-          understanding of organizational culture to deliver recruitment solutions that create lasting impact.
-        </p>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
+            Our approach combines industry expertise, market intelligence, extensive professional networks, and a deep
+           understanding of organizational culture to deliver recruitment solutions that create lasting impact.
+         </p>
 
         <div className="mt-14">
           <div className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
@@ -232,8 +232,8 @@ const services = [
   { icon: Briefcase, title: "Leadership Hiring", desc: "Strategic recruitment for CXOs, Directors, Vice Presidents, and senior management roles." },
   { icon: Users, title: "Permanent Recruitment", desc: "End-to-end hiring solutions for critical business functions." },
   { icon: Compass, title: "Talent Mapping", desc: "Comprehensive market research and talent intelligence to support future workforce planning." },
-  { icon: Wrench, title: "Recruitment Process Consulting", desc: "Optimize hiring workflows, candidate experiences, and recruitment efficiency." },
-  { icon: LineChart, title: "Career Advisory", desc: "Personalized career guidance, leadership coaching, career transition support, executive mentoring, and strategic professional development advisory for professionals across all career stages." },
+  { icon: SearchCheck, title: "Head Hunting", desc: "Proactive search and outreach to attract exceptional talent not actively seeking new opportunities." },
+  { icon: LineChart, title: "Career And Job Search Advisory", desc: "Personalized career guidance, leadership coaching, career transition support, executive mentoring, and strategic professional development advisory for professionals across all career stages." },
 ];
 
 export function Services() {
@@ -348,7 +348,7 @@ export function WhyUs() {
   );
 }
 
-/* ───────── PROCESS ───────── */
+/* ───────── PROCESS ───────── 
 
 const steps = [
   { n: "01", title: "Discovery & Consultation", desc: "Understand your business, culture and hiring objectives." },
@@ -392,6 +392,7 @@ export function Process() {
     </section>
   );
 }
+  */
 
 /* ───────── EMPLOYERS / CANDIDATES ───────── */
 
@@ -650,7 +651,7 @@ export function Contact() {
                   <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Entrepreneurial & Executive Search</div>
                   <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
                     <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> Launched and managed multiple businesses</li>
-                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> 400+ executive search mandates delivered</li>
+                    <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> 550+ executive search mandates delivered</li>
                     <li className="flex gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" /> Deep professional & industry networks</li>
                   </ul>
                 </div>
