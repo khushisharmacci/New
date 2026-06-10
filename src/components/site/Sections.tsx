@@ -28,6 +28,7 @@ import {
   Clock,
   Lock,
   Quote,
+  Star,
   Linkedin,
   ChevronLeft,
   ChevronRight,
@@ -484,23 +485,33 @@ export function EmployersCandidates() {
 const testimonials = [
   {
     quote:
-      "Their understanding of our culture and the leadership bar we operate at was remarkable. The shortlist was tight, relevant and high-calibre.",
-    role: "HR Director, Financial Services",
+      "A highly insightful session with practitcal and balanced career guidance. The consultant provided clear direction, realistic expectations, and actionable recommendations tailored to my background.",
+     rating: 5,
   },
   {
     quote:
-      "We engaged them for a confidential CXO mandate. Discreet, methodical and consistently transparent — exactly what a critical search demands.",
-    role: "CEO, FinTech",
+      "The discussion with Mukesh was frank and to the point. He invested time to understand my specific use case and had suggestions for next steps. Looking forward to staying connected and continuing the relation.",
+    rating: 5,
   },
   {
     quote:
-      "The market intelligence they bring goes well beyond a CV pipeline. They've helped us shape our workforce strategy.",
-    role: "Business Head, Manufacturing",
+      "I had a very insightful session with Mukesh and received clear, practical guidance on my job search strategy. The guidance reflected deep executive experience and a strong understanding of the leadership landscape from his extensive professional network. The advice was structured, realistic, and directly applicable to my situation. I especially appreciated the honest feedback and actionable recommendations. I left the session feeling motivated and better prepared for the next steps in my career. I would highly recommend this session to professionals looking for focused career direction.",
+    rating: 5,
   },
   {
     quote:
-      "Turnaround was significantly faster than our previous partners, and the quality of candidates was noticeably higher.",
-    role: "Hiring Manager, Technology",
+      "Mukesh possesses a rare level of BFSI expertise with deep industry connect. He patiently addressed my queries with clarity, offering actionable strategies for building high-value industry contacts.",
+    rating: 5,
+  },
+  {
+    quote:
+      "Mukesh offered insights from a recruiter's perspective. For example, he highlighted the gaps in my resume and provided suggestions on how to fix these. He also provided a perspective on what potential employers look for in a resume. Mukesh's views helped me in recalibrating my job search.",
+    rating: 4,
+  },
+ {
+    quote:
+      "I was looking for candid feedback and direction as an aspirant after having this session on CV. Mr Mukesh not only did that for me but also shared detailed advice on every section of my CV, the use of words, skill reframing and impact it will have. With this informed approach and direction, I'm sure my positioning will be improved.",
+    rating: 5,
   },
 ];
 
@@ -524,12 +535,21 @@ export function Testimonials() {
           <p className="relative font-display text-xl font-medium leading-relaxed text-foreground sm:text-2xl">
             “{t.quote}”
           </p>
-          <div className="mt-6 flex items-center justify-between">
-            <div>
-              <div className="text-sm font-semibold text-ocean">{t.role}</div>
-              <div className="text-xs text-muted-foreground">Verified client</div>
-            </div>
-            <div className="flex items-center gap-2">
+<div className="mt-6 flex items-center justify-between">
+  <div>
+    <div className="inline-flex items-center gap-1.5 rounded-full border border-teal/30 bg-teal/10 px-3 py-1">
+      <Star className="size-3.5 fill-current text-teal" />
+      <span className="text-xs font-semibold text-teal">
+        {t.rating}/5
+      </span>
+    </div>
+
+    <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
+      Anonymous
+    </div>
+  </div>
+
+  <div className="flex items-center gap-2">
               <button
                 onClick={() => go(-1)}
                 aria-label="Previous"
@@ -580,7 +600,7 @@ export function Contact() {
           subtitle="Executive search, leadership hiring, career advisory and professional development — guided personally by Mukesh Bhasin."
         />
 
-        {/* Profile Card */}
+        {/* Mukesh Bhasin Profile Card */}
         <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ocean/8 via-card to-teal/5 p-8 shadow-xl sm:p-12">
           <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
             <div className="flex flex-col items-center gap-4 lg:items-start">
