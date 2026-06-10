@@ -281,9 +281,9 @@ export function Industries() {
     <section id="industries" className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
-          eyebrow="Industry Expertise"
-          title="Specialized Recruitment Across Key Industries"
-          subtitle="Sector-focused teams with deep domain knowledge and trusted professional networks."
+          eyebrow="Industries Covered"
+          title="Specialized Recruitment Services"
+          subtitle="Deep domain knowledge and trusted professional networks."
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -462,11 +462,11 @@ export function EmployersCandidates() {
         <PersonaCard
           id="candidates"
           eyebrow="For Candidates"
-          title="Build the next chapter of your career with us."
-          intro="We help professionals explore meaningful career opportunities aligned with their experience, goals, and aspirations."
+          title="Build the next chapter of your career through us."
+          intro="We help professionals connect with meaningful career opportunities through paid advisory services."
           bullets={[
-            "Personalised career guidance",
-            "Leadership opportunities across industries",
+            "Personalised 1 on 1 Career Advisory",
+            "Job search guidance",
             "Industry insights and market intelligence",
             "Confidential profile handling",
           ]}
@@ -599,21 +599,21 @@ export function Contact() {
             </div>
 
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Founder & Principal Consultant</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">Founder</div>
               <h3 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Mukesh Bhasin
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Civil Engineer (VJTI) and MMS Finance (JBIMS) with 25+ years across Corporate Banking, Investment Banking,
-                Structured Finance, Infrastructure Finance and Equipment Finance — at Citibank, ABN AMRO, SBI Capital Markets,
-                GE Commercial Finance, IL&FS and Aditya Birla Finance (last role: Head — Syndication & DCM).
+                Civil Engineer (VJTI) and MMS Finance (JBIMS) with 25+ years across Corporate Banking, 
+                Investment Banking, Structured Finance, Infrastructure Finance and Equipment Finance — at 
+                various MNC as well as Domestic BFSI organisations.
               </p>
 
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
                 {[
-                  { v: "25+", l: "Years Experience" },
-                  { v: "400+", l: "Search Mandates" },
-                  { v: "BFSI", l: "Corporate & Investment Banking Expert" },
+                  { v: "27+", l: "Years Experience" },
+                  { v: "550+", l: "Search Mandates" },
+                  { v: "BFSI", l: "Corporate & Investment Banking Experience" },
                 ].map((s) => (
                   <div key={s.l} className="rounded-2xl border border-border bg-card/70 p-4 text-center">
                     <div className="font-display text-2xl font-bold text-ocean">{s.v}</div>
@@ -675,6 +675,7 @@ export function Contact() {
               Mumbai, Maharashtra 400012<br />
               India
             </p>
+           {/*
             <a
               href="https://www.google.com/maps/search/?api=1&query=Crescent+Bay+Parel+Mumbai"
               target="_blank"
@@ -683,9 +684,10 @@ export function Contact() {
             >
               View on Maps <ArrowRight className="size-3.5" />
             </a>
+           */}
           </div>
 
-          <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
+         {/*<div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
             <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
               <Phone className="size-5" />
             </div>
@@ -696,18 +698,30 @@ export function Contact() {
             >
               +91 98198 55065
             </a>
-          </div>
+          </div> */}
 
           <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
             <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
               <Mail className="size-5" />
             </div>
-            <h4 className="mt-4 font-display text-base font-semibold text-foreground">Email</h4>
+            <h4 className="mt-4 font-display text-base font-semibold text-foreground">Mukesh Bhasin</h4>
             <a
               href="mailto:mukesh@careerconnectindia.com"
               className="mt-2 block break-all text-sm text-muted-foreground transition-colors hover:text-teal"
             >
               mukesh@careerconnectindia.com
+            </a>
+          </div>
+          <div className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-teal/40 hover:shadow-lg">
+            <div className="flex size-11 items-center justify-center rounded-xl bg-ocean/10 text-ocean transition-colors group-hover:bg-ocean group-hover:text-ocean-foreground">
+             <Mail className="size-5" />
+            </div>
+           <h4 className="mt-4 font-display text-base font-semibold text-foreground">Monika Bhasin</h4>
+            <a
+             href="mailto:monika@career-connect.in"
+             className="mt-2 block break-all text-sm text-muted-foreground transition-colors hover:text-teal"
+            >
+             monika@career-connect.in
             </a>
           </div>
         </div>
