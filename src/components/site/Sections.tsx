@@ -1,4 +1,5 @@
 import mukeshPhoto from "@/assets/MB.png";
+import monikaPhoto from "@/assets/MoB.jpg";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -644,6 +645,108 @@ export function Contact() {
             </div>
           </div>
         </div>
+
+{/* Monika Bhasin Profile Card */}
+<div className="mt-10 overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-ocean/8 via-card to-teal/5 p-8 shadow-xl sm:p-12">
+  <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
+    <div className="flex flex-col items-center gap-4 lg:items-start">
+      <img
+        src={monikaPhoto}
+        alt="Monika Bhasin"
+        className="size-32 rounded-full object-cover border-4 border-ocean shadow-2xl ring-4 ring-ocean/20"
+      />
+
+      <a
+        href="https://www.linkedin.com/in/monika-sharma-415b081/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:border-teal hover:text-teal"
+      >
+        <Linkedin className="size-3.5" />
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <div>
+      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+        Founder & CEO
+      </div>
+
+      <h3 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Monika Mukesh Bhasin
+      </h3>
+
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+        Chartered Accountant with 24 years of experience in the financial services business, including 19+ years in Executive Search
+       Founded Career Connect during 2006. Instrumental in over 450 mid to senior level mandate closures for top names in India.
+       Prior to launching Career Connect, was part of Corporate Finance team at a MNC.
+      </p>
+
+      <div className="mt-6 grid gap-3 sm:grid-cols-3">
+        {[
+          { v: "25+", l: "Years Experience" },
+          { v: "500+", l: "Search Mandates" },
+          { v: "BFSI", l: "Corporate & Investment Banking Experience" },
+        ].map((s) => (
+          <div
+            key={s.l}
+            className="rounded-2xl border border-border bg-card/70 p-4 text-center"
+          >
+            <div className="font-display text-2xl font-bold text-ocean">
+              {s.v}
+            </div>
+            <div className="mt-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+              {s.l}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-6 grid gap-5 sm:grid-cols-2">
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
+            Executive Search & Leadership Hiring
+          </div>
+
+          <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
+            <li className="flex gap-2">
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" />
+              Founded Career Connect and built the executive search practice from inception
+            </li>
+
+            <li className="flex gap-2">
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" />
+              Delivered 500+ mid to senior-level executive search mandates
+            </li>
+
+            <li className="flex gap-2">
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" />
+              Built trusted partnerships with leading MNCs and Indian enterprises
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">
+            Education
+          </div>
+
+          <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground">
+            <li className="flex gap-2">
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" />
+              Bachelor of Commerce, University of Mumbai (1997)
+            </li>
+
+            <li className="flex gap-2">
+              <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-teal" />
+              Charted Accountant, Institue of Chartered Accountants of India (2001)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Consultation CTA */}
         <div className="mt-8 rounded-3xl border border-border bg-card p-8 text-center shadow-lg sm:p-12">
