@@ -36,14 +36,14 @@ import {
   PhoneOutgoingIcon,
 } from "lucide-react";
 import heroImg from "@/assets/hero-collab.jpg";
-import img1 from "@/assets/carousel/team-meeting.jpg";
-import img2 from "@/assets/carousel/leader.jpg";
+import img1 from "@/assets/carousel/meeting.png";
+import img2 from "@/assets/carousel/careeradv.png";
 import img3 from "@/assets/carousel/right-person.jpg";
 import img4 from "@/assets/carousel/handshake.jpg";
 
 const carouselImages = [
   { src: img1, alt: "Team strategy meeting" },
-  { src: img2, alt: "Leader presenting to team" },
+  { src: img2, alt: "Career Advisory" },
   { src: img3, alt: "Right person for the right job" },
   { src: img4, alt: "Recruitment handshake" },
   { src: heroImg, alt: "Recruiters collaborating" },
